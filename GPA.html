@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ddebf8;
+        }
+        .box1{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.7);
+            background-color: #0b6588;
+            border-radius: 5%;
+            height: 650px;
+            width: 700px;
+
+        }
+        h1{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .table {
+            color: white;
+            margin-top: 30px;
+            /* border: 5px solid rgb(87, 65, 8);
+            border-radius: 10px; */
+            padding:5px;
+        }
+        .table td{
+            padding: 20px;
+        }
+        .table th {
+            font-size: 25px;
+            color: rgb(234, 210, 210);
+            width:140px;
+            height: 18px;
+            /* border-radius: 10px;
+            border: 3px solid rgb(87, 65, 8); */
+            padding: 5px;
+        }
+        input{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            width:140px;
+            height: 18px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            border: 2px solid #1e656a;
+        }
+        select{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            width:160px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width:180px;
+            height: 40px;
+            background-color: #ddebf8;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+        button:hover {
+            background-color: white; 
+        }
+    </style>
+</head>
+<body>
+        <center>
+        <h1>GPA CALCULATOR</h1>
+        <div class="box1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Subject Name</th>
+                        <th>Subject Grade</th>
+                        <th>Subject Credit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" id="subject1"></td>
+                        <td>
+                            <select name="grade" id="grade1">
+                                <option value="">Select Grade</option>
+                                <option value="O">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp1"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject2"></td>
+                        <td>
+                            <select name="grade" id="grade2">
+                                <option value="">Select Grade</option>
+                                <option value="O">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject3"></td>
+                        <td>
+                            <select name="grade" id="grade3">
+                                <option value="">Select Grade</option>
+                                <option value="O">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp3"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject4"></td>
+                        <td>
+                            <select name="grade" id="grade4">
+                                <option value="">Select Grade</option>
+                                <option value="O">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp4"></td>
+                    </tr><tr>
+                        <td><input type="text" id="subject5"></td>
+                        <td>
+                            <select name="grade" id="grade5">
+                                <option value="">Select Grade</option>
+                                <option value="O">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp5"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="subject6"></td>
+                        <td>
+                            <select name="grade" id="grade6">
+                                <option value="">Select Grade</option>
+                                <option value="O+">O</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">A</option>
+                                <option value="B+">B+</option>
+                                <option value="B+">C</option>
+                            </select>
+                        </td>
+                        <td><input type="number" id="gp6"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button class="button" onclick="addRow()">ADD ROW</button>
+            <button class="button" onclick="func()">SUBMIT</button>
+            <br><br><br>
+        </div>
+        <h1 id="calc"></h1>
+    </center>
+</body>
+<script>
+    function func(){
+
+        // function for getting the grade_point*credit  
+
+        function gradecal(grade,credit1){
+            let t = 0;
+            if(grade=='O' || grade=='o'){
+                t+=(10*credit1);
+            }
+            else if(grade=='A+' || grade=='a+'){
+                t+=(9*credit1);
+            }
+            else if(grade=='a'||grade=='A+'){
+                t+=(8*credit1);
+            }
+            else if(grade=='b+' || grade=='B+'){
+                t+=(7*credit1);
+            }
+            else if(grade=='B' || grade=='b'){
+                t+=(6*credit1);
+            }
+            else if(grade=='c' || grade=='C'){
+                t+=(5*credit1);
+            }
+            return t;
+        }
+        let total_grade = 0;
+        let total_grade_points=0;
+        let f=0;
+        let result = document.getElementById("calc");
+        for(let i=1;i<=6;i++){
+            let grade = document.getElementById('grade'+i).value;
+            let credit = parseInt(document.getElementById('gp'+i).value);
+            if(grade === ""){
+                f = 1;
+                result.innerHTML =  "The grade column should not be empty.";
+                break;
+            }
+            let r = gradecal(grade,credit);
+            total_grade_points+=credit;
+            total_grade+=r;    
+        }
+        if(f==0){
+            const gpa = total_grade/total_grade_points;
+            result.innerHTML = `Your GPA is:  ${gpa.toFixed(2)}`;
+        }
+    }
+</script>
+</html>
